@@ -1,0 +1,1112 @@
+
+/* 
+   CSS Styles for Melody Haven Library
+   This file contains all the styling for the music library website
+   including responsive design, animations, and color schemes
+*/
+
+/* CSS Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Font Settings */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #334155;
+    background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 50%, #f3e8ff 100%);
+    min-height: 100vh;
+}
+
+/* Website Container */
+.website-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+.main-header {
+    position: relative;
+    background: linear-gradient(135deg, #1e1b4b 0%, #7c3aed 25%, #1e40af 50%, #0f766e 75%, #1e1b4b 100%);
+    color: white;
+    overflow: hidden;
+    padding: 4rem 1.5rem;
+}
+
+/* Header overlay for better text readability */
+.header-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, transparent 50%, rgba(0,0,0,0.3) 100%);
+}
+
+/* Header content positioning */
+.header-content {
+    position: relative;
+    z-index: 10;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo and title section */
+.logo-title-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Main logo styling */
+.main-logo {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Title section styling */
+.title-section {
+    text-align: center;
+}
+
+/* Main website title */
+.main-title {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 700;
+    background: linear-gradient(135deg, #e0e7ff 0%, #bfdbfe 50%, #a5f3fc 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+}
+
+/* Main subtitle */
+.main-subtitle {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+/* Navigation Styles */
+.main-navigation {
+    background: linear-gradient(135deg, #ffffff 0%, #dbeafe 50%, #f3e8ff 100%);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    border-bottom: 2px solid #e0e7ff;
+}
+
+/* Navigation container */
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Navigation buttons container */
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.25rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+}
+
+/* Individual navigation button */
+.nav-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid transparent;
+    border-radius: 0.5rem;
+    background: none;
+    cursor: pointer;
+    font-weight: 500;
+    color: #475569;
+}
+
+/* Active navigation button */
+.nav-button.active {
+    background: linear-gradient(135deg, #7c3aed 0%, #1e40af 100%);
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Navigation button hover effects */
+.nav-button:hover:not(.active) {
+    color: #7c3aed;
+    background: linear-gradient(135deg, #f3e8ff 0%, #dbeafe 100%);
+    transform: scale(1.05);
+    border-color: #e0e7ff;
+}
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+    width: 100%;
+}
+
+/* Content wrapper with background */
+.content-wrapper {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    padding: 3rem;
+    border: 1px solid #e0e7ff;
+}
+
+/* Content sections */
+.content-section {
+    display: none;
+}
+
+/* Active content section */
+.content-section.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section titles */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #7c3aed 0%, #1e40af 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Welcome section */
+.welcome-section {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* Section descriptions */
+.section-description {
+    font-size: 1.25rem;
+    color: #475569;
+    margin-bottom: 1rem;
+    max-width: 48rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Section subtitles */
+.section-subtitle {
+    font-size: 1.125rem;
+    color: #64748b;
+    max-width: 32rem;
+    margin: 0 auto;
+}
+
+/* Feature Cards Grid */
+.feature-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+/* Individual feature card */
+.feature-card {
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-left: 4px solid;
+}
+
+/* Feature card hover effects */
+.feature-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Card header */
+.card-header {
+    margin-bottom: 1rem;
+}
+
+/* Card icons */
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Card titles */
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Card descriptions */
+.card-description {
+    color: #64748b;
+    font-size: 0.875rem;
+}
+
+/* Card content */
+.card-content p {
+    color: #475569;
+}
+
+/* Color variations for cards */
+.purple-card {
+    background: linear-gradient(135deg, #f3e8ff 0%, #dbeafe 100%);
+    border-left-color: #7c3aed;
+}
+
+.purple-card .card-icon {
+    color: #7c3aed;
+}
+
+.purple-card .card-title {
+    background: linear-gradient(135deg, #7c3aed 0%, #1e40af 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.blue-card {
+    background: linear-gradient(135deg, #dbeafe 0%, #a5f3fc 100%);
+    border-left-color: #1e40af;
+}
+
+.blue-card .card-icon {
+    color: #1e40af;
+}
+
+.blue-card .card-title {
+    background: linear-gradient(135deg, #1e40af 0%, #0891b2 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.teal-card {
+    background: linear-gradient(135deg, #a5f3fc 0%, #a7f3d0 100%);
+    border-left-color: #0f766e;
+}
+
+.teal-card .card-icon {
+    color: #0f766e;
+}
+
+.teal-card .card-title {
+    background: linear-gradient(135deg, #0f766e 0%, #059669 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Catalog Items */
+.catalog-items {
+    display: grid;
+    gap: 1.5rem;
+}
+
+/* Catalog cards */
+.catalog-card {
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid;
+}
+
+.catalog-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Download buttons */
+.download-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.indigo-card {
+    background: linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 100%);
+    border-color: #6366f1;
+}
+
+.indigo-card .download-button {
+    background: linear-gradient(135deg, #6366f1 0%, #7c3aed 100%);
+}
+
+.indigo-card .download-button:hover {
+    background: linear-gradient(135deg, #4f46e5 0%, #6d28d9 100%);
+}
+
+/* Events and Programs Sections */
+.subsection {
+    margin-bottom: 3rem;
+}
+
+.subsection-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.875rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, #1e40af 0%, #7c3aed 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Events grid */
+.events-grid,
+.programs-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+/* Event cards */
+.event-card,
+.program-card {
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-left: 4px solid;
+}
+
+.event-card:hover,
+.program-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Event content layout */
+.event-content,
+.program-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+/* Event headers */
+.event-header,
+.program-header {
+    margin-bottom: 1rem;
+}
+
+.event-title,
+.program-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Event details */
+.event-details {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    color: #64748b;
+}
+
+.event-time,
+.event-location {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+/* Event and program descriptions */
+.event-description,
+.program-description {
+    color: #475569;
+    margin-bottom: 1rem;
+}
+
+/* Program details */
+.program-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    color: #64748b;
+}
+
+/* Event and program buttons */
+.event-button,
+.program-button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Event and program images */
+.event-image img,
+.program-image img {
+    width: 100%;
+    height: 8rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: 2px solid;
+}
+
+/* Orange card styling for jazz event */
+.orange-card {
+    background: linear-gradient(135deg, #fed7aa 0%, #fde68a 100%);
+    border-left-color: #ea580c;
+}
+
+.orange-card .event-title {
+    background: linear-gradient(135deg, #ea580c 0%, #d97706 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.orange-card .event-button {
+    background: linear-gradient(135deg, #ea580c 0%, #d97706 100%);
+}
+
+.orange-card .event-button:hover {
+    background: linear-gradient(135deg, #dc2626 0%, #c2410c 100%);
+}
+
+.orange-card .event-image img {
+    border-color: #fed7aa;
+}
+
+/* Pink card styling for children's event */
+.pink-card {
+    background: linear-gradient(135deg, #fce7f3 0%, #fdf2f8 100%);
+    border-left-color: #db2777;
+}
+
+.pink-card .event-title {
+    background: linear-gradient(135deg, #db2777 0%, #be185d 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.pink-card .event-button {
+    background: linear-gradient(135deg, #db2777 0%, #be185d 100%);
+}
+
+.pink-card .event-button:hover {
+    background: linear-gradient(135deg, #be185d 0%, #9d174d 100%);
+}
+
+.pink-card .event-image img {
+    border-color: #fce7f3;
+}
+
+/* Emerald card styling for piano program */
+.emerald-card {
+    background: linear-gradient(135deg, #a7f3d0 0%, #bbf7d0 100%);
+    border-left-color: #059669;
+}
+
+.emerald-card .program-title {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.emerald-card .program-button {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+}
+
+.emerald-card .program-button:hover {
+    background: linear-gradient(135deg, #047857 0%, #065f46 100%);
+}
+
+.emerald-card .program-image img {
+    border-color: #a7f3d0;
+}
+
+/* Violet card styling for audio production program */
+.violet-card {
+    background: linear-gradient(135deg, #e0e7ff 0%, #ede9fe 100%);
+    border-left-color: #7c3aed;
+}
+
+.violet-card .program-title {
+    background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.violet-card .program-button {
+    background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+}
+
+.violet-card .program-button:hover {
+    background: linear-gradient(135deg, #6d28d9 0%, #5b21b6 100%);
+}
+
+.violet-card .program-image img {
+    border-color: #e0e7ff;
+}
+
+/* Membership Plans */
+.membership-plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Membership cards */
+.membership-card {
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    border: 2px solid;
+}
+
+.membership-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Standard plan styling */
+.standard-plan {
+    background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+    border-color: #3b82f6;
+}
+
+/* Premium plan styling */
+.premium-plan {
+    background: linear-gradient(135deg, #f3e8ff 0%, #fce7f3 100%);
+    border-color: #a855f7;
+}
+
+/* Popular badge for premium plan */
+.popular-badge {
+    position: absolute;
+    top: -0.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #7c3aed 0%, #db2777 100%);
+    color: white;
+    padding: 0.25rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Plan headers */
+.plan-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.plan-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.standard-plan .plan-title {
+    background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.premium-plan .plan-title {
+    background: linear-gradient(135deg, #a855f7 0%, #db2777 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Plan prices */
+.plan-price {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.standard-plan .plan-price {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.premium-plan .plan-price {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.price-period {
+    font-size: 1rem;
+    color: #64748b;
+}
+
+/* Plan descriptions */
+.plan-description {
+    color: #475569;
+    margin-bottom: 1rem;
+}
+
+/* Features lists */
+.features-list {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.features-list li {
+    padding: 0.5rem 0;
+    color: #475569;
+    font-size: 0.875rem;
+}
+
+/* Plan buttons */
+.plan-button {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.standard-plan .plan-button {
+    background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+    color: white;
+}
+
+.standard-plan .plan-button:hover {
+    background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+}
+
+.premium-plan .plan-button {
+    background: linear-gradient(135deg, #a855f7 0%, #db2777 100%);
+    color: white;
+}
+
+.premium-plan .plan-button:hover {
+    background: linear-gradient(135deg, #9333ea 0%, #be185d 100%);
+}
+
+/* Contact Section */
+.contact-flex-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact-subtitle {
+    color: #475569;
+    margin-bottom: 2rem;
+}
+
+/* Contact form card */
+.contact-form-card {
+    background: linear-gradient(135deg, #dbeafe 0%, #a5f3fc 100%);
+    border: 1px solid #3b82f6;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.librarian-profile-card, .contact-form-card {
+    flex: 1 1 400px;
+    max-width: 500px;
+}
+
+.librarian-profile img {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.librarian-info h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.librarian-info p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Form styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    color: #475569;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.form-input,
+.form-textarea {
+    padding: 0.75rem;
+    border: 1px solid #3b82f6;
+    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: #1e40af;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Form submit button */
+.form-submit-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background: linear-gradient(135deg, #0f766e 0%, #1e40af 100%);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-submit-button:hover {
+    background: linear-gradient(135deg, #0d9488 0%, #1d4ed8 100%);
+}
+
+/* Contact email display */
+.contact-email {
+    text-align: center;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+/* Footer Styles */
+.main-footer {
+    background: linear-gradient(135deg, #1f2937 0%, #374151 50%, #1f2937 100%);
+    color: white;
+    padding: 2rem 1.5rem;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-logo-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer-logo {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 0.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-title {
+    font-weight: 600;
+    background: linear-gradient(135deg, #e0e7ff 0%, #dbeafe 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer-text {
+    color: #d1d5db;
+}
+
+/* Success Message */
+.success-message {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.success-message.hidden {
+    opacity: 0;
+    transform: translateX(100%);
+    pointer-events: none;
+}
+
+.success-content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Header responsive adjustments */
+    .logo-title-section {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .main-logo {
+        height: 4rem;
+        width: 4rem;
+    }
+    
+    /* Navigation responsive adjustments */
+    .nav-buttons {
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    
+    .nav-buttons::-webkit-scrollbar {
+        display: none;
+    }
+    
+    /* Content responsive adjustments */
+    .content-wrapper {
+        padding: 1.5rem;
+    }
+    
+    /* Feature cards responsive */
+    .feature-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Event and program cards responsive */
+    .event-content,
+    .program-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .event-details {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .program-details {
+        justify-content: center;
+    }
+    
+    /* Membership plans responsive */
+    .membership-plans {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Success message responsive */
+    .success-message {
+        top: 1rem;
+        right: 1rem;
+        left: 1rem;
+        right: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra small screen adjustments */
+    .main-header {
+        padding: 2rem 1rem;
+    }
+    
+    .main-content {
+        padding: 1.5rem 1rem;
+    }
+    
+    .content-wrapper {
+        padding: 1rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .main-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    .main-navigation,
+    .success-message {
+        display: none;
+    }
+    
+    .main-header {
+        background: white;
+        color: black;
+    }
+    
+    .main-title,
+    .main-subtitle {
+        color: black;
+    }
+}
+
+
+/* Contact Section Two Column Layout */
+
+.contact-flex-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.librarian-profile-card {
+    flex: 1 1 300px;
+    background: linear-gradient(135deg, #dbeafe 0%, #f3e8ff 100%);
+    border: 1px solid #7c3aed;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.librarian-profile-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.librarian-profile-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.librarian-profile-card p,
+.librarian-profile-card ul {
+    text-align: left;
+    color: #475569;
+    margin: 0.25rem 0;
+}
+
+.librarian-profile-card ul {
+    padding-left: 1.2rem;
+    list-style-type: disc;
+}
+
+.contact-form-card {
+    flex: 1 1 300px;
+}
+
+/* Responsive: Stack bawah-bawah kalau skrin kecik */
+@media (max-width: 768px) {
+    .contact-flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .librarian-profile-card,
+    .contact-form-card {
+        width: 100%;
+    }
+}

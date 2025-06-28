@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melody Haven Library - Where Music Comes Alive</title>
+    <meta name="description" content="Explore a world of rhythm, harmony, and inspiration through our rich music collections, events, and learning programs.">
+    
+    <!-- CSS Styling -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Main website container -->
+    <div class="website-container">
+        
+        <!-- Header section with logo and title -->
+        <header class="main-header">
+            <!-- Background overlay for better text visibility -->
+            <div class="header-overlay"></div>
+            
+            <!-- Header content with logo and title -->
+            <div class="header-content">
+                <div class="logo-title-section">
+                    <!-- Website logo -->
+                    <img 
+                        src="/logo.jpg" 
+                        alt="Melody Haven Library Logo" 
+                        class="main-logo"
+                    />
+                    
+                    <!-- Main title and subtitle -->
+                    <div class="title-section">
+                        <h1 class="main-title">Melody Haven Library</h1>
+                        <p class="main-subtitle">Where every note tells a story and every melody finds its home</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation menu -->
+        <nav class="main-navigation">
+            <div class="nav-container">
+                <!-- Navigation buttons -->
+                <div class="nav-buttons">
+                    <button class="nav-button active" data-section="home">
+                        <i class="fas fa-music"></i>
+                        Home
+                    </button>
+                    <button class="nav-button" data-section="catalog">
+                        <i class="fas fa-download"></i>
+                        Music Catalog
+                    </button>
+                    <button class="nav-button" data-section="activities">
+                        <i class="fas fa-calendar"></i>
+                        Activities & Programs
+                    </button>
+                    <button class="nav-button" data-section="membership">
+                        <i class="fas fa-star"></i>
+                        Membership
+                    </button>
+                    <button class="nav-button" data-section="contact">
+                        <i class="fas fa-envelope"></i>
+                        Contact Us
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main content area -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                
+                <!-- Home Section -->
+                <section id="home" class="content-section active">
+                    <!-- Welcome message -->
+                    <div class="welcome-section">
+                        <h2 class="section-title">Welcome to Melody Haven – where music comes alive!</h2>
+                        <p class="section-description">
+                            Explore a world of rhythm, harmony, and inspiration through our rich music collections, events, and learning programs.
+                        </p>
+                        <p class="section-subtitle">
+                            Whether you're a curious beginner or a seasoned musician, your musical journey starts here.
+                        </p>
+                    </div>
+                    
+                    <!-- Feature cards -->
+                    <div class="feature-cards">
+                        <!-- Rich Collection Card -->
+                        <div class="feature-card purple-card">
+                            <div class="card-header">
+                                <i class="fas fa-music card-icon"></i>
+                                <h3 class="card-title">Rich Collection</h3>
+                            </div>
+                            <div class="card-content">
+                                <p>Discover thousands of sheet music, recordings, and digital resources across all genres.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Live Events Card -->
+                        <div class="feature-card blue-card">
+                            <div class="card-header">
+                                <i class="fas fa-calendar card-icon"></i>
+                                <h3 class="card-title">Live Events</h3>
+                            </div>
+                            <div class="card-content">
+                                <p>Join concerts, workshops, and community gatherings celebrating music in all its forms.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Learn & Grow Card -->
+                        <div class="feature-card teal-card">
+                            <div class="card-header">
+                                <i class="fas fa-users card-icon"></i>
+                                <h3 class="card-title">Learn & Grow</h3>
+                            </div>
+                            <div class="card-content">
+                                <p>Participate in educational programs designed for musicians of every skill level.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Music Catalog Section -->
+                <section id="catalog" class="content-section">
+                    <h2 class="section-title">Music Catalog</h2>
+                    
+                    <!-- Catalog items -->
+                    <div class="catalog-items">
+                        <!-- Classical Collection -->
+                        <div class="catalog-card indigo-card">
+                            <div class="card-header">
+                                <i class="fas fa-music card-icon"></i>
+                                <h3 class="card-title">Classical Essentials</h3>
+                                <p class="card-description">Sheet Music - Mozart & Beethoven</p>
+                            </div>
+                            <div class="card-content">
+                                <p>Complete collection of classical masterpieces with performance notes.</p>
+                                <button class="download-button">
+                                    <i class="fas fa-download"></i>
+                                    Access Collection
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Hip Hop Collection -->
+                        <div class="catalog-card blue-card">
+                            <div class="card-header">
+                                <i class="fas fa-headphones card-icon"></i>
+                                <h3 class="card-title">Hip Hop Beats Vol. 2</h3>
+                                <p class="card-description">MP3 Download & Streaming</p>
+                            </div>
+                            <div class="card-content">
+                                <p>Modern beats and samples for contemporary music creation.</p>
+                                <button class="download-button">
+                                    <i class="fas fa-download"></i>
+                                    Download & Stream
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Vocal Training -->
+                        <div class="catalog-card teal-card">
+                            <div class="card-header">
+                                <i class="fas fa-microphone card-icon"></i>
+                                <h3 class="card-title">Vocal Training Audio</h3>
+                                <p class="card-description">2.5hr Voice Improvement Course</p>
+                            </div>
+                            <div class="card-content">
+                                <p>Professional vocal exercises and techniques for all skill levels.</p>
+                                <button class="download-button">
+                                    <i class="fas fa-download"></i>
+                                    Start Training
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Activities & Programs Section -->
+                <section id="activities" class="content-section">
+                    <h2 class="section-title">Activities & Programs</h2>
+                    
+                    <!-- Upcoming Events -->
+                    <div class="subsection">
+                        <h3 class="subsection-title">
+                            <i class="fas fa-calendar"></i>
+                            Upcoming Events
+                        </h3>
+                        
+                        <div class="events-grid">
+                            <!-- Jazz Event -->
+                            <div class="event-card orange-card">
+                                <div class="event-content">
+                                    <div class="event-info">
+                                        <div class="event-header">
+                                            <i class="fas fa-calendar event-icon"></i>
+                                            <h4 class="event-title">Jazz Under the Stars</h4>
+                                        </div>
+                                        <div class="event-details">
+                                            <span class="event-time">
+                                                <i class="fas fa-clock"></i>
+                                                June 21, 7:00 PM
+                                            </span>
+                                            <span class="event-location">
+                                                <i class="fas fa-map-marker-alt"></i>
+                                                Outdoor Pavilion
+                                            </span>
+                                        </div>
+                                        <p class="event-description">
+                                            Experience the magic of live jazz under the canopy of stars. Featuring local and touring jazz artists.
+                                        </p>
+                                        <button class="event-button">Book Your Spot</button>
+                                    </div>
+                                    <div class="event-image">
+                                        <img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=300&h=200&fit=crop" 
+                                             alt="Jazz concert under stars" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Children's Music Event -->
+                            <div class="event-card pink-card">
+                                <div class="event-content">
+                                    <div class="event-info">
+                                        <div class="event-header">
+                                            <i class="fas fa-users event-icon"></i>
+                                            <h4 class="event-title">Children's Music Hour</h4>
+                                        </div>
+                                        <div class="event-details">
+                                            <span class="event-time">
+                                                <i class="fas fa-clock"></i>
+                                                July 10, 10:00 AM
+                                            </span>
+                                            <span class="event-location">
+                                                <i class="fas fa-map-marker-alt"></i>
+                                                Children's Section
+                                            </span>
+                                        </div>
+                                        <p class="event-description">
+                                            Interactive music sessions designed for children aged 4-10. Musical instruments, singing, and music games!
+                                        </p>
+                                        <button class="event-button">Register Now</button>
+                                    </div>
+                                    <div class="event-image">
+                                        <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=300&h=200&fit=crop" 
+                                             alt="Children playing music" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Educational Programs -->
+                    <div class="subsection">
+                        <h3 class="subsection-title">
+                            <i class="fas fa-book-open"></i>
+                            Educational Programs
+                        </h3>
+                        
+                        <div class="programs-grid">
+                            <!-- Piano Course -->
+                            <div class="program-card emerald-card">
+                                <div class="program-content">
+                                    <div class="program-info">
+                                        <div class="program-header">
+                                            <i class="fas fa-music program-icon"></i>
+                                            <h4 class="program-title">Introduction to Piano</h4>
+                                            <p class="program-subtitle">4-week workshop for beginners</p>
+                                        </div>
+                                        <p class="program-description">
+                                            Learn the basics of piano playing with our experienced instructors. Perfect for complete beginners.
+                                        </p>
+                                        <div class="program-details">
+                                            <span>📅 Starting August 1</span>
+                                            <span>⏱️ 2 hours/week</span>
+                                            <span>💰 $120 total</span>
+                                        </div>
+                                        <button class="program-button">Register Today</button>
+                                    </div>
+                                    <div class="program-image">
+                                        <img src="https://images.unsplash.com/photo-1500673922987-e212871fec22?w=300&h=200&fit=crop" 
+                                             alt="Piano lessons" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Audio Production Course -->
+                            <div class="program-card violet-card">
+                                <div class="program-content">
+                                    <div class="program-info">
+                                        <div class="program-header">
+                                            <i class="fas fa-headphones program-icon"></i>
+                                            <h4 class="program-title">Audio Production 101</h4>
+                                            <p class="program-subtitle">Hands-on editing with GarageBand</p>
+                                        </div>
+                                        <p class="program-description">
+                                            Master the basics of digital audio production using GarageBand. Create your first track!
+                                        </p>
+                                        <div class="program-details">
+                                            <span>📅 Starting July 15</span>
+                                            <span>⏱️ 3 hours/week</span>
+                                            <span>💰 $180 total</span>
+                                        </div>
+                                        <button class="program-button">Join Workshop</button>
+                                    </div>
+                                    <div class="program-image">
+                                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=300&h=200&fit=crop" 
+                                             alt="Audio production setup" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Membership Section -->
+                <section id="membership" class="content-section">
+                    <h2 class="section-title">Membership Plans</h2>
+                    
+                    <!-- Membership plans -->
+                    <div class="membership-plans">
+                        <!-- Standard Plan -->
+                        <div class="membership-card standard-plan">
+                            <div class="plan-header">
+                                <h3 class="plan-title">Standard</h3>
+                                <div class="plan-price">Free</div>
+                                <p class="plan-description">Perfect for casual music lovers</p>
+                            </div>
+                            <div class="plan-features">
+                                <ul class="features-list">
+                                    <li>✓ Basic catalog access</li>
+                                    <li>✓ Event registration</li>
+                                    <li>✓ Community newsletter</li>
+                                    <li>✓ Limited downloads (5/month)</li>
+                                </ul>
+                                <button class="plan-button">Start Free</button>
+                            </div>
+                        </div>
+
+                        <!-- Premium Plan -->
+                        <div class="membership-card premium-plan">
+                            <div class="popular-badge">Most Popular</div>
+                            <div class="plan-header">
+                                <h3 class="plan-title">Premium</h3>
+                                <div class="plan-price">$25<span class="price-period">/year</span></div>
+                                <p class="plan-description">For serious music enthusiasts</p>
+                            </div>
+                            <div class="plan-features">
+                                <ul class="features-list">
+                                    <li>✓ Unlimited downloads</li>
+                                    <li>✓ Priority event access</li>
+                                    <li>✓ Exclusive member content</li>
+                                    <li>✓ Program discounts (20% off)</li>
+                                    <li>✓ One-on-one consultations</li>
+                                </ul>
+                                <button class="plan-button premium">Upgrade to Premium</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contact Section -->
+                <section id="contact" class="content-section">
+                    <div class="contact-container">
+                        <div class="contact-header">
+                            <h2 class="section-title">Contact Us</h2>
+
+                            <div class="contact-flex-container">
+
+                                <!-- Kiri: Profile Librarian -->
+                                <div class="librarian-profile-card">
+                                    <img src="librarian fazatul.jpg" alt="Librarian Photo">
+                                    <h3>Nur Zulaikha Binti Ahmad</h3>
+                                    <p>Senior Music Librarian</p>
+                                    <p>Email: nzulaikha@melodyhaven.my</p>
+                                    <p>Phone Number: 0134527890</p>
+                                    <p><strong>Achievements:</strong></p>
+                                    <ul>
+                                        <li>Outstanding Young Librarian Award – Malaysian Library Council, 2023</li>
+	                                    <li>Lead Coordinator – Digitization Project for Traditional Malaysian Music Archives</li>
+	                                    <li>Guest Speaker – ASEAN Music Metadata Workshop (2024)</li>
+                                    </ul>
+                                    <p class="contact-subtitle">Have questions or suggestions? We'd love to hear from you!</p>
+                                </div>
+                                
+                                <!-- Kanan: Contact Form -->
+                                <div class="contact-form-card">
+                                    <form id="contactForm" class="contact-form">
+                                    <div class="form-group">
+                                        <label for="name" class="form-label">Your Name</label>
+                                        <input 
+                                            type="text" 
+                                            id="name" 
+                                            name="name" 
+                                            class="form-input" 
+                                            placeholder="Enter your name" 
+                                            required 
+                                        />
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                    <label for="email" class="form-label">Your Email</label>
+                                    <input 
+                                        type="email" 
+                                        id="email" 
+                                        name="email" 
+                                        class="form-input" 
+                                        placeholder="Enter your email" 
+                                        required 
+                                    />
+                                    </div>
+
+                                    <div class="form-group">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea 
+                                        id="message" 
+                                        name="message" 
+                                        rows="5" 
+                                        class="form-textarea" 
+                                        placeholder="Type your message here..." 
+                                        required
+                                    ></textarea>
+                                    </div>
+
+                                    <button type="submit" class="form-submit-button">
+                                    <i class="fas fa-envelope"></i>
+                                    Send Message
+                                    </button>
+                                    </form>
+                                </div>
+                            </div>
+
+                        <!-- Contact email -->
+                        <div class="contact-email">
+                            <i class="fas fa-envelope"></i>
+                            nzulaikha@melodyhaven.my
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="footer-content">
+                <div class="footer-logo-section">
+                    <img 
+                        src="/logo.jpg" 
+                        alt="Melody Haven Library Logo" 
+                        class="footer-logo"
+                    />
+                    <span class="footer-title">Melody Haven Library</span>
+                </div>
+                <p class="footer-text">
+                    © 2025 Melody Haven Library | Email: nzulaikha@melodyhaven.my
+                </p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Success message popup -->
+    <div id="successMessage" class="success-message hidden">
+        <div class="success-content">
+            <i class="fas fa-check-circle"></i>
+            <span>Message sent successfully! We will reply to you soon.</span>
+        </div>
+    </div>
+
+    <!-- JavaScript functionality -->
+    <script src="script.js"></script>
+</body>
+</html>
